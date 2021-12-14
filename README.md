@@ -8,7 +8,18 @@ User -----------------------> | Nginx proxy container with basic auth | ---> | H
                               +---------------------------------------+      +---------------------------+
 ```
 
-The `./nginx/.htpasswd` file was created using the following command:
+## Pre-requisites
+
+- [docker](https://docs.docker.com/engine/install/ubuntu/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+- apache2-utils
+
+You can install the apache2-utils package in Ubuntu using the command:
+```bash
+$ sudo apt-get install apache2-utils
+```
+
+The `./nginx/.htpasswd` file was then created using the following command:
 
 ```bash
 $ htpasswd -c ./nginx/.htpasswd user
