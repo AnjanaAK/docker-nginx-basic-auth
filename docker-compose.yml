@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    image: anjana95/sample-web-server:latest
+    
+  nginx-proxy:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+    - ./nginx/:/etc/nginx/
